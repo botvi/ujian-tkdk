@@ -14,6 +14,7 @@ class Mahasiswa extends Model
         'npm',
         'prodi',
         'fakultas',
+        'semester',
         'no_wa',
         'user_id',
         'gelombang_id',

@@ -72,6 +72,22 @@
                                             @endif
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <th>Sertifikat</th>
+                                        <td>
+                                            @php
+                                                $totalNilai = round(
+                                                    ($nilaiMahasiswa->nilai_tkdk + $nilaiMahasiswa->nilai_praktek + 2) / 2,
+                                                );
+                                            @endphp
+                                            @if($nilaiMahasiswa->nilai_praktek != null && $totalNilai >= 60)
+                                                <a href="{{ route('hasilNilai.sertifikat') }}" class="btn btn-primary">Cetak
+                                                    Sertifikat</a>
+                                            @else
+                                                <span class="badge bg-warning">Tidak ada sertifikat</span>
+                                            @endif
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

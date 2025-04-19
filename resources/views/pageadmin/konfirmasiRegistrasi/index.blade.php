@@ -28,6 +28,7 @@
                                 <th>NPM</th>
                                 <th>Prodi</th>
                                 <th>Fakultas</th>
+                                <th>Semester</th>
                                 <th>Gelombang</th>
                                 <th>Tahun Akademik</th>
                                 <th>No. WA</th>
@@ -43,6 +44,7 @@
                                 <td>{{ $a->npm }}</td>
                                 <td>{{ $a->prodi }}</td>
                                 <td>{{ $a->fakultas }}</td>
+                                <td>{{ $a->semester }}</td>
                                 <td><span class="badge bg-primary">{{ $a->gelombang->nama_gelombang }}</span></td>
                                 <td><span class="badge bg-primary">{{ $a->tahun_akademik->tahun_akademik }}</span></td>
                                 <td>{{ $a->no_wa }}</td>
@@ -67,6 +69,7 @@
                                 <th>NPM</th>
                                 <th>Prodi</th>
                                 <th>Fakultas</th>
+                                <th>Semester</th>
                                 <th>Gelombang</th>
                                 <th>Tahun Akademik</th>
                                 <th>No. WA</th>

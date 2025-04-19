@@ -338,8 +338,7 @@
                 <ul class="dropdown-menu dropdown-menu-end">
 
                     @if(Auth::check() && Auth::user()->role == 'mahasiswa')
-                    <li><a class="dropdown-item" href=""><i class="bx bx-user"></i><span>Profile</span></a>
-                    </li>
+                   
                     @endif
                   
                  

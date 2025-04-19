@@ -32,6 +32,7 @@
                                     <th>NPM</th>
                                     <th>Program Studi</th>
                                     <th>Fakultas</th>
+                                    <th>Semester</th>
                                     <th>Nama Penguji</th>
                                     <th>Gelombang</th>
                                     <th>Tahun Akademik</th>
@@ -46,6 +47,7 @@
                                         <td>{{ $jadwal->user->mahasiswa->npm }}</td>
                                         <td>{{ $jadwal->user->mahasiswa->prodi }}</td>
                                         <td>{{ $jadwal->user->mahasiswa->fakultas }}</td>
+                                        <td>{{ $jadwal->user->mahasiswa->semester }}</td>
                                         <td>{{ $jadwal->penguji->nama }}</td>
                                         <td>{{ $jadwal->gelombang->nama_gelombang }}</td>
                                         <td>{{ $jadwal->tahun_akademik->tahun_akademik }}</td>
@@ -60,6 +62,7 @@
                                     <th>NPM</th>
                                     <th>Program Studi</th>
                                     <th>Fakultas</th>
+                                    <th>Semester</th>
                                     <th>Nama Penguji</th>
                                     <th>Gelombang</th>
                                     <th>Tahun Akademik</th>

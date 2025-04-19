@@ -11,7 +11,8 @@ use App\Http\Controllers\admin\{
     MasterPengujiController,
     JadwalPraktekController,
     MasterTahunAkademikController,
-    NilaiMahasiswaController
+    NilaiMahasiswaController,
+    LaporanController
 };
 use App\Http\Controllers\penguji\{
     DaftarMahasiswaPraktek,
@@ -98,6 +99,13 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/jadwal-praktek/delete-all', [JadwalPraktekController::class, 'deleteAll'])->name('admin.jadwalPraktek.deleteAll');
 
     Route::get('/nilai-mahasiswa', [NilaiMahasiswaController::class, 'index'])->name('admin.nilaiMahasiswa.index');
+
+    Route::get('/update-status-tahun-akademik/{id}', [DashboardController::class, 'updateStatusTahunAkademik'])->name('admin.updateStatusTahunAkademik');
+    Route::get('/update-status-gelombang/{id}', [DashboardController::class, 'updateStatusGelombang'])->name('admin.updateStatusGelombang');
+
+    Route::get('/laporan', [LaporanController::class, 'index'])->name('admin.laporan.index');
+    Route::get('/laporan/rekappendaftaran', [LaporanController::class, 'laporanrekappendaftaran'])->name('admin.laporan.rekappendaftaran');
+    Route::get('/laporan/rekapnilai', [LaporanController::class, 'laporanrekapnilai'])->name('admin.laporan.rekapnilai');
 });
 // ADMIN
 
@@ -121,6 +129,7 @@ Route::group(['middleware' => ['role:admin,mahasiswa,penguji']], function () {
     Route::get('/tkdk', [TkdkController::class, 'index'])->name('tkdk.index');
     Route::post('/save-nilai-tkdk', [SaveNilaiTkdkMahasiswaController::class, 'saveNilai'])->name('saveNilaiTkdk');
     Route::get('/hasil-nilai', [HasilNilaiMahasiswa::class, 'index'])->name('hasilNilai.index');
+    Route::get('/sertifikat', [HasilNilaiMahasiswa::class, 'sertifikat'])->name('hasilNilai.sertifikat');
 });
 
 

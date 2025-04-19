@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('npm');
             $table->string('prodi');
             $table->string('fakultas');
+            $table->string('semester');
             $table->string('no_wa');
             $table->foreignId('gelombang_id');
             $table->foreignId('tahun_akademik_id');

@@ -30,6 +30,7 @@ class RegisterUserController extends Controller
             'password'     => 'required|string|min:6|confirmed',
             'prodi'        => 'required|string',
             'fakultas'     => 'required|string',
+            'semester'     => 'required|string',
             'no_wa'        => 'required|string|max:20',
             'gelombang_id' => 'required',
             'tahun_akademik_id' => 'required',
@@ -52,6 +53,7 @@ class RegisterUserController extends Controller
                 'npm'          => $request->npm, // bisa disesuaikan
                 'prodi'        => $request->prodi,
                 'fakultas'     => $request->fakultas,
+                'semester'     => $request->semester,
                 'no_wa'        => $request->no_wa,
                 'gelombang_id' => $request->gelombang_id,
                 'tahun_akademik_id' => $request->tahun_akademik_id,

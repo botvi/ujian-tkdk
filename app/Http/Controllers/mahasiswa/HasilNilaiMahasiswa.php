@@ -24,7 +24,7 @@ class HasilNilaiMahasiswa extends Controller
             Alert::error('Gagal', 'Tidak ada tahun akademik yang aktif');
             return redirect()->back();
         }
-    
+
         $nilaiMahasiswa = NilaiMahasiswa::with(['user.mahasiswa', 'gelombang', 'tahun_akademik'])
             ->where('gelombang_id', $gelombang->id)
             ->where('tahun_akademik_id', $tahunAkademik->id)
@@ -33,5 +33,24 @@ class HasilNilaiMahasiswa extends Controller
         return view('pageweb.hasilNilai.index', compact('nilaiMahasiswa'));
     }
 
-   
+    public function sertifikat()
+    {
+        $gelombang = MasterGelombang::where('status', 'aktif')->first();
+        if (!$gelombang) {
+            Alert::error('Gagal', 'Tidak ada gelombang yang aktif');
+            return redirect()->back();
+        }
+        $tahunAkademik = MasterTahunAkademik::where('status', 'aktif')->first();
+        if (!$tahunAkademik) {
+            Alert::error('Gagal', 'Tidak ada tahun akademik yang aktif');
+            return redirect()->back();
+        }
+
+        $nilaiMahasiswa = NilaiMahasiswa::with(['user.mahasiswa', 'gelombang', 'tahun_akademik'])
+            ->where('gelombang_id', $gelombang->id)
+            ->where('tahun_akademik_id', $tahunAkademik->id)
+            ->where('user_id', Auth::id())
+            ->first();
+        return view('pageweb.hasilNilai.sertifikat', compact('nilaiMahasiswa'));
+    }
 }

@@ -45,13 +45,7 @@
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                                     </form>
-                                    <a href="{{ route('admin.masterGelombang.updateStatus', $a->id) }}" class="btn btn-sm btn-success">
-                                        @if($a->status == 'aktif')
-                                            Nonaktifkan
-                                        @else
-                                            Aktifkan
-                                        @endif
-                                    </a>
+                                  
 
                                 </td>
                             </tr>

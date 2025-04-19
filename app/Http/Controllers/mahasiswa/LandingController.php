@@ -23,11 +23,11 @@ class LandingController extends Controller
         if ($masterTahunAkademik->isEmpty()) {
             $masterTahunAkademik = collect(); // Mengembalikan koleksi kosong jika tidak ada status aktif
         }
-        $quis = Quis::all()->first();  
-        $soal = $quis->soal;     
-        $waktu_mulai = $quis->waktu_mulai;
-        $waktu_selesai = $quis->waktu_selesai;
-        $tanggal_mulai = $quis->tanggal_mulai;
+        $quis = Quis::all()->first();
+        $soal = $quis->soal ?? null;
+        $waktu_mulai = $quis->waktu_mulai ?? null;
+        $waktu_selesai = $quis->waktu_selesai ?? null;
+        $tanggal_mulai = $quis->tanggal_mulai ?? null;
         return view('pageweb.landingpage.index', compact('masterGelombang', 'masterTahunAkademik', 'soal', 'waktu_mulai', 'waktu_selesai', 'tanggal_mulai'));
     }
 

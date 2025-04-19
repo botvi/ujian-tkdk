@@ -77,6 +77,7 @@
                                                 <input type="email" class="form-control" id="email" name="email" required>
                                             </div>
 
+
                                             <div class="col-md-6">
                                                 <label for="fakultas" class="form-label">Fakultas</label>
                                                 <select class="form-control" id="fakultas" name="fakultas" required>
@@ -106,7 +107,29 @@
                                                 </select>
                                             </div>
                                             
-                                           
+                                            <div class="col-md-6">
+                                                <label for="semester" class="form-label">Semester</label>
+                                                <select class="form-control" id="semester" name="semester" required>
+                                                    <option value="">Pilih Semester</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>            
+                                                </select>
+                                            </div>
+                                            
                                             
                                             
                                             <!-- User Account Fields -->
