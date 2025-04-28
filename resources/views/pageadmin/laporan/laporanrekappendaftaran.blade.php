@@ -159,6 +159,32 @@
                     @endforeach
                 </tbody>
             </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Teluk Kuantan, {{ \Carbon\Carbon::now()->isoFormat('D MMMM Y') }}</th>
+                    </tr>
+                    <tr style="height: 50px">
+                        <th><strong>Pengawas Ujian,</strong></th>
+                    </tr>
+                    <tr style="height: 50px">
+                        <th><strong>1. ........................................................</strong></th>
+                        <th style="padding-left: 50px">1.</th>
+                    </tr>
+                    <tr style="height: 50px">
+                        <th><strong>2. ........................................................</strong></th>
+                        <th style="padding-left: 200px">2.</th>
+                    </tr>
+                    <tr style="height: 50px">
+                        <th><strong>3. ........................................................</strong></th>
+                        <th style="padding-left: 50px">3.</th>
+                    </tr>
+                    <tr style="height: 50px">
+                        <th><strong>4. ........................................................</strong></th>
+                        <th style="padding-left: 200px">4.</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
     <script>
