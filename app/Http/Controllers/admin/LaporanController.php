@@ -8,6 +8,7 @@ use App\Models\MasterTahunAkademik;
 use App\Models\MasterGelombang;
 use App\Models\Mahasiswa;
 use App\Models\NilaiMahasiswa;
+use App\Models\ManajemenReport;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
@@ -33,12 +34,13 @@ class LaporanController extends Controller
    {
       $gelombangAktif = MasterGelombang::where('status', 'aktif')->first();
       $tahunAktif = MasterTahunAkademik::where('status', 'aktif')->first();
+      $manajemenReport = ManajemenReport::first();
       $nilaiMahasiswa = NilaiMahasiswa::with(['user.mahasiswa', 'gelombang', 'tahun_akademik'])
       ->where('gelombang_id', $gelombangAktif->id)
       ->where('tahun_akademik_id', $tahunAktif->id)
       ->orderBy('created_at', 'desc')
       ->get();
-      return view('pageadmin.laporan.laporanrekapnilai', compact('nilaiMahasiswa', 'gelombangAktif', 'tahunAktif'));
+      return view('pageadmin.laporan.laporanrekapnilai', compact('nilaiMahasiswa', 'gelombangAktif', 'tahunAktif', 'manajemenReport'));
    }
    
 }

@@ -123,10 +123,16 @@
 <body>
     <div class="pages">
         <div class="info mb-5 text-center">
-            <h4 class="very-bold">DAFTAR PENDAFTARAN TKDK TAHUN {{ $tahunAktif->tahun_akademik }} {{ strtoupper($gelombangAktif->nama_gelombang) }}</h4>
-            <h4 class="very-bold">UNIVERSITAS ISLAM KUANTAN SINGINGI</h4>
-            <h4 class="very-bold">LEMBAGA PENELITIAN PENGABDIAN KEPADA MASYARAKAT DAN DAKWAH ISLAMIYAH</h4>
-            <h5>Hari : {{ \Carbon\Carbon::now()->isoFormat('dddd') }}, Tanggal : {{ \Carbon\Carbon::now()->isoFormat('D MMMM Y') }}, Jam : {{ \Carbon\Carbon::now()->format('H:i') }} WIB</h5>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizlODAh8lXFSXX29FhoUCK3LAFFfQ6l5hUuBQ10ZkVl5RN1fIAoiUX63vpcLYfCZWXLvabvXw5feuTPzs3HOW5pSVzbRoveqevTtESnuAvDW3neKiisGrmDNlXYB5l52pNP8QYvvI_XHL0B31ZcuQ38RsA_gMnOcuJ1FmSJO7pgCDzLLBi9ZAcCNkD/s320/GKL2_Universitas%20Islam%20Kuantan%20Singingi%20-%20Koleksilogo.com.jpg"
+                    alt="Logo" style="width: 170px; height: 170px; margin-right: 20px;">
+                <div>
+                    <h4 class="very-bold">DAFTAR PENDAFTARAN TKDK TAHUN {{ $tahunAktif->tahun_akademik }} {{ strtoupper($gelombangAktif->nama_gelombang) }}</h4>
+                    <h4 class="very-bold">UNIVERSITAS ISLAM KUANTAN SINGINGI</h4>
+                    <h4 class="very-bold">LEMBAGA PENELITIAN PENGABDIAN KEPADA MASYARAKAT DAN DAKWAH ISLAMIYAH</h4>
+                    <h5>Hari : {{ \Carbon\Carbon::now()->isoFormat('dddd') }}, Tanggal : {{ \Carbon\Carbon::now()->isoFormat('D MMMM Y') }}, Jam : {{ \Carbon\Carbon::now()->format('H:i') }} WIB</h5>
+                </div>
+            </div>
         </div>
 
 

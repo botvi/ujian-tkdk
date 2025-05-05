@@ -35,6 +35,7 @@
                           
                             <!-- kode anggaran -->
                             <div class="col-md-12">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="tahun_akademik" class="form-label">Tahun Akademik</label>
                                 <input type="text" class="form-control" id="tahun_akademik" name="tahun_akademik" value="{{ old('tahun_akademik', $masterTahunAkademik->tahun_akademik) }}" required>
                             </div>

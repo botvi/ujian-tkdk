@@ -71,6 +71,33 @@ class DaftarMahasiswaPraktek extends Controller
             $nilaiMahasiswa->tahun_akademik_id = $tahunAkademik->id;
         }
 
+        // Generate nomor sertifikat
+        $tahun = date('Y');
+        $bulan = date('m');
+        
+        // Konversi bulan ke romawi
+        $bulanRomawi = [
+            '01' => 'I',
+            '02' => 'II', 
+            '03' => 'III',
+            '04' => 'IV',
+            '05' => 'V',
+            '06' => 'VI',
+            '07' => 'VII',
+            '08' => 'VIII',
+            '09' => 'IX',
+            '10' => 'X',
+            '11' => 'XI',
+            '12' => 'XII'
+        ];
+        
+        // Hitung urutan untuk tahun ini
+        $urutanTahunIni = NilaiMahasiswa::whereYear('created_at', $tahun)
+                         ->whereNotNull('nomor_sertifikat')
+                         ->count() + 1;
+        $nomorUrut = str_pad($urutanTahunIni, 3, '0', STR_PAD_LEFT); // Format menjadi 001, 002, dst
+        
+        $nilaiMahasiswa->nomor_sertifikat = $nomorUrut . '/LPPMDI-UNIKS/TK/' . $bulanRomawi[$bulan] . '/' . $tahun;
         $nilaiMahasiswa->nilai_praktek = $request->nilai_praktek;
         $nilaiMahasiswa->save();
 

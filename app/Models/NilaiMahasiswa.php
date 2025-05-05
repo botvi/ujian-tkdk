@@ -9,7 +9,7 @@ class NilaiMahasiswa extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'gelombang_id', 'tahun_akademik_id', 'nilai_tkdk', 'nilai_praktek'];
+    protected $fillable = ['user_id', 'gelombang_id', 'tahun_akademik_id', 'nilai_tkdk', 'nilai_praktek', 'nomor_sertifikat'];
 
     public function user()
     {

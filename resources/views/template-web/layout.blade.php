@@ -56,7 +56,7 @@
             $year = date('Y');
             ?>
 
-            <p class="mb-0">Copyright © <?php echo $year; ?>. All right reserved.</p>
+            <p class="mb-0">Copyright © <?php echo $year; ?>. LPPMDI - Universitas Islam Kuantan Singing.</p>
         </footer>
 	</div>
 	<!--end wrapper-->

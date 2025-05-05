@@ -85,6 +85,7 @@
                                                             <input type="text" class="form-control" value="{{ $jadwal->user->mahasiswa->nama }}" readonly>
                                                         </div>
                                                         <div class="mb-3">
+                                                            <span class="text-danger fw-bold">*</span>
                                                             <label class="form-label">Nilai Praktek</label>
                                                             <input type="number" class="form-control" name="nilai_praktek" min="0" max="100" required>
                                                         </div>

@@ -36,9 +36,15 @@
                                     </tr>
                                     <tr>
                                         <th>Nilai Akhir</th>
-                                        <td>{{ round(($nilaiMahasiswa->nilai_tkdk + $nilaiMahasiswa->nilai_praktek + 2) / 2) ?? '-' }}
+                                        <td>
+                                            @if($nilaiMahasiswa->nilai_praktek != null)
+                                                {{ round(($nilaiMahasiswa->nilai_tkdk + $nilaiMahasiswa->nilai_praktek + 2) / 2) }}
+                                            @else
+                                                -
+                                            @endif
                                         </td>
                                     </tr>
+                                    @if($nilaiMahasiswa->nilai_praktek != null)
                                     <tr>
                                         <th>Prediket Kelulusan</th>
                                         <td> @php
@@ -72,6 +78,7 @@
                                             @endif
                                         </td>
                                     </tr>
+                                    @endif
                                     <tr>
                                         <th>Sertifikat</th>
                                         <td>

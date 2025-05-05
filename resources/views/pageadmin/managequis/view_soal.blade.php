@@ -10,13 +10,13 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mb-0 p-0">
                             <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Soal Quis</li>
+                            <li class="breadcrumb-item active" aria-current="page">Soal TKDK</li>
                         </ol>
                     </nav>
                 </div>
             </div>
             <div class="container">
-                <h2>Soal Ujian</h2>
+                <h2>Soal TKDK</h2>
                 
                 <table class="table table-bordered">
                     <tr>

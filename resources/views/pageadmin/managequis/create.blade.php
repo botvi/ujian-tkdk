@@ -10,7 +10,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mb-0 p-0">
                             <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Quis</li>
+                            <li class="breadcrumb-item active" aria-current="page">Soal TKDK</li>
                         </ol>
                     </nav>
                 </div>
@@ -33,26 +33,30 @@
                         <div class="card-body p-5">
                             <div class="card-title d-flex align-items-center">
                                 <div><i class="bx bxs-file-export me-1 font-22 text-primary"></i></div>
-                                <h5 class="mb-0 text-primary">Tambah Quis</h5>
+                                <h5 class="mb-0 text-primary">Tambah Soal TKDK</h5>
                             </div>
                             <hr>
                             <form action="{{ route('quis.store') }}" method="POST" class="row g-3"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-md-12">
+                                    <span class="text-danger fw-bold">*</span>
                                     <label for="tanggal_mulai" class="form-label">Tanggal Mulai</label>
                                     <input type="date" name="tanggal_mulai" class="form-control" required>
                                 </div>
                                 <div class="col-md-6">
+                                    <span class="text-danger fw-bold">*</span>
                                     <label for="waktu_mulai" class="form-label">Waktu Mulai</label>
                                     <input type="time" name="waktu_mulai" class="form-control" required>
                                 </div>
                                 <div class="col-md-6">
+                                    <span class="text-danger fw-bold">*</span>
                                     <label for="waktu_selesai" class="form-label">Waktu Selesai</label>
                                     <input type="time" name="waktu_selesai" class="form-control" required>
                                 </div>
                                 
                                 <div class="col-md-12">
+                                    <span class="text-danger fw-bold">*</span>
                                     <label for="soal" class="form-label">Soal</label>
                                     <div id="soal-container">
                                         <!-- Soal akan ditambahkan di sini -->

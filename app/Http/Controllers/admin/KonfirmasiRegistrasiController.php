@@ -48,4 +48,15 @@ class KonfirmasiRegistrasiController extends Controller
     Alert::success('Berhasil', 'Status akun berhasil diubah');
     return redirect()->route('admin.konfirmasiRegistrasi.index');
    }
+
+   public function updateStatusAll(Request $request)
+   {
+    $mahasiswa = Mahasiswa::whereIn('id', $request->selected_ids)->get();
+    foreach($mahasiswa as $m) {
+        $m->status_akun = 'aktif';
+        $m->save();
+    }
+    Alert::success('Berhasil', 'Status akun berhasil diubah');
+    return redirect()->route('admin.konfirmasiRegistrasi.index');
+   }
 }

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->foreignId('gelombang_id');
             $table->foreignId('tahun_akademik_id');
+            $table->string('nomor_sertifikat')->nullable();
             $table->integer('nilai_tkdk')->nullable();
             $table->integer('nilai_praktek')->nullable();
             $table->timestamps();

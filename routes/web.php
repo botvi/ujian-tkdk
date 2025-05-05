@@ -12,7 +12,9 @@ use App\Http\Controllers\admin\{
     JadwalPraktekController,
     MasterTahunAkademikController,
     NilaiMahasiswaController,
-    LaporanController
+    LaporanController,
+    ManajemenReportController,
+    ProfilAdminController
 };
 use App\Http\Controllers\penguji\{
     DaftarMahasiswaPraktek,
@@ -84,6 +86,9 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::delete('/master-tahun-akademik/delete/{id}', [MasterTahunAkademikController::class, 'destroy'])->name('admin.masterTahunAkademik.destroy');
     Route::get('/master-tahun-akademik/update-status/{id}', [MasterTahunAkademikController::class, 'updateStatus'])->name('admin.masterTahunAkademik.updateStatus');
 
+    Route::get('/profil', [ProfilAdminController::class, 'index'])->name('admin.profil.index');
+    Route::put('/profil/update/{id}', [ProfilAdminController::class, 'update'])->name('admin.profil.update');
+
     Route::get('/master-penguji', [MasterPengujiController::class, 'index'])->name('admin.masterPenguji.index');
     Route::get('/master-penguji/create', [MasterPengujiController::class, 'create'])->name('admin.masterPenguji.create');
     Route::post('/master-penguji/store', [MasterPengujiController::class, 'store'])->name('admin.masterPenguji.store');
@@ -93,6 +98,7 @@ Route::group(['middleware' => ['role:admin']], function () {
 
     Route::get('/konfirmasi-registrasi', [KonfirmasiRegistrasiController::class, 'index'])->name('admin.konfirmasiRegistrasi.index');
     Route::get('/konfirmasi-registrasi/update-status/{id}', [KonfirmasiRegistrasiController::class, 'updateStatus'])->name('admin.konfirmasiRegistrasi.updateStatus');
+    Route::post('/konfirmasi-registrasi/update-status-all', [KonfirmasiRegistrasiController::class, 'updateStatusAll'])->name('admin.konfirmasiRegistrasi.updateStatusAll');
 
     Route::get('/jadwal-praktek', [JadwalPraktekController::class, 'index'])->name('admin.jadwalPraktek.index');
     Route::get('/jadwal-praktek/generate', [JadwalPraktekController::class, 'generateJadwal'])->name('admin.jadwalPraktek.generate');
@@ -106,6 +112,9 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/laporan', [LaporanController::class, 'index'])->name('admin.laporan.index');
     Route::get('/laporan/rekappendaftaran', [LaporanController::class, 'laporanrekappendaftaran'])->name('admin.laporan.rekappendaftaran');
     Route::get('/laporan/rekapnilai', [LaporanController::class, 'laporanrekapnilai'])->name('admin.laporan.rekapnilai');
+
+    Route::get('/manajemen-report', [ManajemenReportController::class, 'createOrUpdate'])->name('admin.manajemenReport.createOrUpdate');
+    Route::post('/manajemen-report/store-or-update', [ManajemenReportController::class, 'storeOrUpdate'])->name('admin.manajemenReport.storeOrUpdate');
 });
 // ADMIN
 

@@ -1,0 +1,24 @@
+[
+    {
+        "gambar": null,
+        "jawaban": "a",
+        "pilihan": {
+            "a": "a",
+            "b": "b",
+            "c": "c",
+            "d": "d"
+        },
+        "pertanyaan": "test soal 1"
+    },
+    {
+        "gambar": null,
+        "jawaban": "b",
+        "pilihan": {
+            "a": "aa",
+            "b": "bb",
+            "c": "cc",
+            "d": "dd"
+        },
+        "pertanyaan": "test soal 2"
+    }
+]

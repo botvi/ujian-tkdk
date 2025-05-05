@@ -148,7 +148,7 @@
         <div class="info mb-2 text-center">
             <h4 class="very-bold">SERTIFIKAT HASIL</h4>
             <h4 class="very-bold">TES KEAGAMAAN</h4>
-            <h5 class="">Nomor : 197/LPPMDI-UNIKS/TK/VII/2024</h5>
+            <h5 class="">Nomor : {{ $nilaiMahasiswa->nomor_sertifikat }}</h5>
         </div>
     </div>
     <div class="pages mt-2">
@@ -184,7 +184,7 @@
             </div>
             <div class="pages">
                 <div class="info mb-2 text-center">
-                    <h5 class="">Telah menyelesaikan <b>Tes Keagamaan</b> pada tanggal <b>18 April 2025</b>
+                    <h5 class="">Telah menyelesaikan <b>Tes Keagamaan</b> pada tanggal <b>{{ $nilaiMahasiswa->created_at->isoFormat('D MMMM Y') }}</b>
                         dengan hasil <b> @php
                             $totalNilai = round(($nilaiMahasiswa->nilai_tkdk + $nilaiMahasiswa->nilai_praktek + 2) / 2);
                         @endphp
@@ -225,18 +225,18 @@
                     </div>
                     <div class="pages mb-2">
                         <div class="info text-center">
-                            <h5 class="">Teluk Kuantan, {{ date('d F Y') }}</h5>
+                            <h5 class="">Teluk Kuantan, {{ \Carbon\Carbon::now()->isoFormat('D MMMM Y') }}</h5>
                         </div>
                     </div>
                     <div class="info">
                         <table style="width: 100%; border-collapse: collapse">
                             <tr>
                                 <td style="width: 50%; text-align: center; padding: 10px">
-                                    <h5 style="font-weight: bold"><u>Dr. Ikrima Mailani, S.Pd.I., M.Pd.I</u></h5>
+                                    <h5 style="font-weight: bold"><u>{{ $manajemenReport->nama_rektor ?? '' }}</u></h5>
                                     <h5 style="font-weight: bold">REKTOR</h5>
                                 </td>
                                 <td style="width: 50%; text-align: center; padding: 10px">
-                                    <h5 style="font-weight: bold"><u>H. Fitrianto, S.Ag., M.Sh</u></h5>
+                                    <h5 style="font-weight: bold"><u>{{ $manajemenReport->nama_ketua_lppmdi ?? '' }}</u></h5>
                                     <h5 style="font-weight: bold">KETUA LPPMDI</h5>
                                 </td>
                             </tr>

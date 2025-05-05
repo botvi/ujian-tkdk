@@ -34,12 +34,14 @@
                             @method('PUT')
                           
                             <!-- kode anggaran -->
-                            <div class="col-md-12">
+                            <div class="col-md-12"> 
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="nama_gelombang" class="form-label">Nama Gelombang</label>
                                 <input type="text" class="form-control" id="nama_gelombang" name="nama_gelombang" value="{{ old('nama_gelombang', $masterGelombang->nama_gelombang) }}" required>
                             </div>
                             <!-- tahun aktif -->
                             <div class="col-md-12">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="nama_bulan" class="form-label">Nama Bulan</label>
                                 <input type="text" class="form-control" id="nama_bulan" name="nama_bulan" value="{{ old('nama_bulan', $masterGelombang->nama_bulan) }}" required>
                             </div>

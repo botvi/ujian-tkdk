@@ -31,6 +31,7 @@
                             @csrf
                             @method('PUT')
                             <div class="col-md-12">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="nama" class="form-label">Nama Lengkap</label>
                                 <input type="text" class="form-control @error('nama') is-invalid @enderror" 
                                     id="nama" name="nama" value="{{ old('nama', $penguji->nama) }}" 
@@ -41,6 +42,7 @@
                             </div>
                         
                             <div class="col-md-6">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="no_wa" class="form-label">No WhatsApp</label>
                                 <input type="text" class="form-control @error('no_wa') is-invalid @enderror" 
                                     id="no_wa" name="no_wa" value="{{ old('no_wa', $penguji->no_wa) }}" 
@@ -54,6 +56,7 @@
                             </div>
                         
                             <div class="col-md-6">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror" 
                                     id="email" name="email" value="{{ old('email', $user->email) }}" 
@@ -64,6 +67,7 @@
                             </div>
                         
                             <div class="col-md-6">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control @error('username') is-invalid @enderror" 
                                     id="username" name="username" value="{{ old('username', $user->username) }}" 
@@ -74,21 +78,33 @@
                             </div>
                         
                             <div class="col-md-6">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control @error('password') is-invalid @enderror" 
+                                <div class="input-group" id="show_hide_password">
+                                    <input type="password" class="form-control @error('password') is-invalid @enderror" 
                                         id="password" name="password" 
-                                    placeholder="Minimal 6 karakter" 
-                                    minlength="6">
+                                        placeholder="Minimal 8 karakter" 
+                                        minlength="8">
+                                    <a href="javascript:;" class="input-group-text bg-transparent">
+                                        <i class="bx bx-hide"></i>
+                                    </a>
+                                </div>
                                 @error('password')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
                         
                             <div class="col-md-6">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="password_confirmation" class="form-label">Konfirmasi Password</label>
-                                <input type="password" class="form-control" 
-                                    id="password_confirmation" name="password_confirmation" 
-                                    placeholder="Ulangi password">
+                                <div class="input-group" id="show_hide_password_confirmation">
+                                    <input type="password" class="form-control" 
+                                        id="password_confirmation" name="password_confirmation" 
+                                        placeholder="Ulangi password">
+                                    <a href="javascript:;" class="input-group-text bg-transparent">
+                                        <i class="bx bx-hide"></i>
+                                    </a>
+                                </div>
                             </div>
                         
                             <div class="col-12">
@@ -108,4 +124,26 @@
         </div>
     </div>
 </div>
+@endsection
+@section('script')
+    <!--app JS-->
+    <script src="{{ asset('admin') }}/assets/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#show_hide_password a, #show_hide_password_confirmation a").on('click', function(event) {
+                event.preventDefault();
+                let parentDiv = $(this).parent('div');
+                if (parentDiv.find('input').attr("type") == "text") {
+                    parentDiv.find('input').attr('type', 'password');
+                    parentDiv.find('i').addClass("bx-hide");
+                    parentDiv.find('i').removeClass("bx-show");
+                } else if (parentDiv.find('input').attr("type") == "password") {
+                    parentDiv.find('input').attr('type', 'text');
+                    parentDiv.find('i').removeClass("bx-hide");
+                    parentDiv.find('i').addClass("bx-show");
+                }
+            });
+        });
+    </script>
 @endsection

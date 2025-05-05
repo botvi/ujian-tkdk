@@ -61,24 +61,29 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-6">
+                                                <span class="text-danger fw-bold">*</span>
                                                 <label for="nama" class="form-label">Nama Lengkap</label>
                                                 <input type="text" class="form-control" id="nama" name="nama" required>
                                             </div>
                                             <div class="col-md-6">
+                                                <span class="text-danger fw-bold">*</span>
                                                 <label for="no_wa" class="form-label">No WhatsApp</label>
                                                 <input type="text" class="form-control" id="no_wa" name="no_wa" required>
                                             </div>
                                             <div class="col-md-6">
+                                                <span class="text-danger fw-bold">*</span>
                                                 <label for="npm" class="form-label">NPM</label>
                                                 <input type="text" class="form-control" id="npm" name="npm" required>
                                             </div>
                                             <div class="col-md-6">
+                                                <span class="text-danger fw-bold">*</span>
                                                 <label for="email" class="form-label">Email</label>
                                                 <input type="email" class="form-control" id="email" name="email" required>
                                             </div>
 
 
                                             <div class="col-md-6">
+                                                <span class="text-danger fw-bold">*</span>
                                                 <label for="fakultas" class="form-label">Fakultas</label>
                                                 <select class="form-control" id="fakultas" name="fakultas" required>
                                                     <option value="">Pilih Fakultas</option>
@@ -89,6 +94,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-6">
+                                                <span class="text-danger fw-bold">*</span>
                                                 <label for="prodi" class="form-label">Program Studi</label>
                                                 <select class="form-control" id="prodi" name="prodi" required>
                                                     <option value="">Pilih Program Studi</option>
@@ -108,6 +114,7 @@
                                             </div>
                                             
                                             <div class="col-md-6">
+                                                <span class="text-danger fw-bold">*</span>
                                                 <label for="semester" class="form-label">Semester</label>
                                                 <select class="form-control" id="semester" name="semester" required>
                                                     <option value="">Pilih Semester</option>
@@ -125,8 +132,7 @@
                                                     <option value="12">12</option>
                                                     <option value="13">13</option>
                                                     <option value="14">14</option>
-                                                    <option value="15">15</option>
-                                                    <option value="16">16</option>            
+                                                   
                                                 </select>
                                             </div>
                                             
@@ -138,16 +144,24 @@
                                                 <h6 class="text-primary">Informasi Akun Pengguna</h6>
                                             </div>
                                             <div class="col-md-12">
+                                                <span class="text-danger fw-bold">*</span>
                                                 <label for="username" class="form-label">Username</label>
                                                 <input type="text" class="form-control" id="username" name="username" required>
                                             </div>
-                                            <div class="col-md-6">
-                                                <label for="password" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="password" name="password" required>
+                                            <div class="col-6">
+                                                <label for="password" class="form-label">Enter Password</label>
+                                                <div class="input-group" id="show_hide_password">
+                                                    <input type="password" class="form-control border-end-0" name="password" id="password" placeholder="Enter Password" required>
+                                                    <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+                                                </div>
                                             </div>
                                             <div class="col-md-6">
+                                                <span class="text-danger fw-bold">*</span>
                                                 <label for="password_confirmation" class="form-label">Konfirmasi Password</label>
-                                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
+                                                <div class="input-group" id="show_hide_password">
+                                                    <input type="password" class="form-control border-end-0" name="password_confirmation" id="password_confirmation" placeholder="Konfirmasi Password" required>
+                                                    <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+                                                </div>
                                             </div>
                 
                                             <div class="col-12 text-center">

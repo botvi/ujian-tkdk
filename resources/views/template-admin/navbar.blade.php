@@ -7,11 +7,17 @@
             <div class="menu-title">DASHBOARD</div>
         </a>
     </li>
-    <li class="menu-label">MANAJEMEN QUIZ</li>
+    <li>
+        <a href="/profil">
+            <div class="parent-icon"><i class='bx bx-user'></i></div>
+            <div class="menu-title">PROFIL ADMIN</div>
+        </a>
+    </li>
+    <li class="menu-label">MANAJEMEN SOAL TKDK</li>
     <li>
         <a href="/quis">
             <div class="parent-icon"><i class='bx bx-book'></i></div>
-            <div class="menu-title">QUIZ</div>
+            <div class="menu-title">QUIZ (SOAL TKDK)</div>
         </a>
     </li>
     <li class="menu-label">MASTER DATA</li>
@@ -51,6 +57,12 @@
         <a href="/jadwal-praktek">
             <div class="parent-icon"><i class='bx bx-calendar'></i></div>
             <div class="menu-title">JADWAL PRAKTEK</div>
+        </a>
+    </li>
+    <li>
+        <a href="/manajemen-report">
+            <div class="parent-icon"><i class='bx bx-file'></i></div>
+            <div class="menu-title">MANAJEMEN REPORT</div>
         </a>
     </li>
     <li>

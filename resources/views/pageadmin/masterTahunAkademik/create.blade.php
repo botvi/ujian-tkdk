@@ -31,6 +31,7 @@
                         <form action="{{ route('admin.masterTahunAkademik.store') }}" method="POST" class="row g-3">
                             @csrf
                             <div class="col-md-12">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="tahun_akademik" class="form-label">Tahun Akademik</label>
                                 <input type="text" class="form-control" id="tahun_akademik" name="tahun_akademik" required>
                             </div>

@@ -211,8 +211,8 @@
                     <td style="width: 50%; text-align: center; padding: 10px">
                         <h5>Teluk Kuantan, {{ \Carbon\Carbon::now()->format('d F Y') }}</h5>
                         <h5 style="margin-bottom: 60px">Ketua,</h5>
-                        <h5 style="font-weight: bold"><u>H. Fitrianto, S.Ag., M.Sh</u></h5>
-                        <h5 style="font-weight: bold">NIDN. 2117027602</h5>
+                        <h5 style="font-weight: bold"><u>{{ $manajemenReport->nama_ketua_lppmdi ?? '' }}</u></h5>
+                        <h5 style="font-weight: bold">NIDN. {{ $manajemenReport->nidn_ketua_lppmdi ?? '' }}</h5>
                     </td>
                 </tr>
                 <tr>

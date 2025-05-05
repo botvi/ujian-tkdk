@@ -31,10 +31,12 @@
                         <form action="{{ route('admin.masterGelombang.store') }}" method="POST" class="row g-3">
                             @csrf
                             <div class="col-md-12">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="nama_gelombang" class="form-label">Nama Gelombang</label>
                                 <input type="text" class="form-control" id="nama_gelombang" name="nama_gelombang" required>
                             </div>
                             <div class="col-md-12">
+                                <span class="text-danger fw-bold">*</span>
                                 <label for="nama_bulan" class="form-label">Nama Bulan</label>
                                 <input type="text" class="form-control" id="nama_bulan" name="nama_bulan" required>
                             </div>
