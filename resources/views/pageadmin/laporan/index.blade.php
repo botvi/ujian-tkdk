@@ -20,7 +20,7 @@
             <hr />
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('admin.laporan.rekappendaftaran') }}" target="_blank" class="btn btn-primary mb-3">Rekap Pendaftaran</a>
+                    <a href="{{ route('admin.laporan.rekappendaftaran') }}" target="_blank" class="btn btn-primary mb-3 me-3">Rekap Pendaftaran</a>
                     <a href="{{ route('admin.laporan.rekapnilai') }}" target="_blank" class="btn btn-primary mb-3">Rekap Nilai</a>
                 </div>
             </div>

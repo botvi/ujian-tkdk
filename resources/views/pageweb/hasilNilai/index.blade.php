@@ -38,7 +38,7 @@
                                         <th>Nilai Akhir</th>
                                         <td>
                                             @if($nilaiMahasiswa->nilai_praktek != null)
-                                                {{ round(($nilaiMahasiswa->nilai_tkdk + $nilaiMahasiswa->nilai_praktek + 2) / 2) }}
+                                                {{ round(($nilaiMahasiswa->nilai_tkdk + $nilaiMahasiswa->nilai_praktek + 2) / 2 -1) }}
                                             @else
                                                 -
                                             @endif

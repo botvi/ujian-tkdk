@@ -45,7 +45,7 @@
                                         <td>{{ $index + 1 }}</td>
                                         <td>{{ $nilai->nilai_tkdk ?? '-' }}</td>
                                         <td>{{ $nilai->nilai_praktek ?? '-' }}</td>
-                                        <td><span class="badge bg-success">{{ round(($nilai->nilai_tkdk + $nilai->nilai_praktek + 2) / 2) ?? '-' }}</span></td>
+                                        <td><span class="badge bg-success">{{ round(($nilai->nilai_tkdk + $nilai->nilai_praktek + 2) / 2 - 1) ?? '-' }}</span></td>
                                         <td>
                                             @php
                                                 $totalNilai = round(($nilai->nilai_tkdk + $nilai->nilai_praktek + 2) / 2);
