@@ -29,6 +29,7 @@ use App\Http\Controllers\mahasiswa\{
 use App\Http\Controllers\{
     RegisterUserController,
     LoginController,
+    ResetPasswordController
 };
 /*
 |--------------------------------------------------------------------------
@@ -141,6 +142,11 @@ Route::group(['middleware' => ['role:admin,mahasiswa,penguji']], function () {
     Route::get('/sertifikat', [HasilNilaiMahasiswa::class, 'sertifikat'])->name('hasilNilai.sertifikat');
 });
 
+// Reset Password Routes
+Route::get('forgot-password', [ResetPasswordController::class, 'showResetForm'])->name('password.request');
+Route::post('forgot-password', [ResetPasswordController::class, 'sendResetLink'])->name('password.email');
+Route::post('reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');
+Route::get('change-password/{token}', [ResetPasswordController::class, 'changePassword'])->name('password.change');
 
 
 
